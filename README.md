@@ -7,7 +7,7 @@ By default you will get a joke from category "Programming" in English.
 To chage the language, use flag -l. You can choose from English (en), German (de), Czech (cs) and Spanish (es). 
 For example: ./RestAPIClient -l de
 
-To see the list of avaliable categories, use flag -showall (
+To see the list of avaliable categories, use flag -showall.
 For example:./RestAPIClietn -showall
 
 To change the category, use flag -cat. 
