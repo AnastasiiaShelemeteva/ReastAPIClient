@@ -47,12 +47,12 @@ func showJoke(category *string, language *string) {
 	response, err := http.Get("https://sv443.net/jokeapi/v2/joke/" + *category + "?format=json&lang=" + *language + "&blacklistFlags=sexist,racist&amount=1")
 	errCheck(err)
 	defer response.Body.Close()
+
 	data, _ := ioutil.ReadAll(response.Body)
 	apiErrCheck(data)
 
 	var joke Jokes
 	json.Unmarshal([]byte(data), &joke)
-
 	if joke.Type == "single" {
 		fmt.Println(joke.Joke)
 	} else if joke.Type == "twopart" {
